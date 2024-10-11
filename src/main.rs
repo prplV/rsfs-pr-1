@@ -1,9 +1,12 @@
 mod cli;
+mod core;
 
 use cli::Args;
 use clap::Parser;
+// use core::{Diskmng, Filemng, Segment, Zipmng};
+
 fn main() {
-    let cli = Args::parse();
-    println!("{:?}", cli);
+    let mut cli = Args::parse();
+    let _ = cli.exec();
 }
 
